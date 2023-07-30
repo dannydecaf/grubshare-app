@@ -1,9 +1,9 @@
-import { View, Text, SafeAreaView, Button } from "react-native";
+import { View, Text, SafeAreaView, Button, StyleSheet } from "react-native";
 import React from "react";
 
 export default function RegisterScreen({navigation}) {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <Button
         title="Navigate to Home Screen"
         onPress={() => navigation.navigate("Home")}
@@ -15,3 +15,12 @@ export default function RegisterScreen({navigation}) {
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+      flex: 1,
+      backgroundColor: "#fff",
+      alignItems: "center",
+      justifyContent: "center",
+  },
+});
