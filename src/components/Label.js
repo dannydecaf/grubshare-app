@@ -4,6 +4,6 @@ import tw from 'tailwind-react-native-classnames'
 
 export default function Label({text}) {
   return (
-      <Text style={tw `text-lg p-1 font-semibold`}>{text}</Text>
+      <Text style={tw `text-lg font-semibold mb-2`}>{text}</Text>
   )
 }
