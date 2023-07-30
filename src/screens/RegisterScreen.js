@@ -1,12 +1,17 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text, SafeAreaView, Button } from "react-native";
+import React from "react";
 
-const RegisterScreen = () => {
+export default function RegisterScreen({navigation}) {
   return (
-    <View>
-      <Text>RegisterScreen</Text>
-    </View>
-  )
-}
-
-export default RegisterScreen
+    <SafeAreaView>
+      <Button
+        title="Navigate to Home Screen"
+        onPress={() => navigation.navigate("Home")}
+      />
+      <Button
+        title="Navigate to Login Screen"
+        onPress={() => navigation.navigate("Login")}
+      />
+    </SafeAreaView>
+  );
+};
