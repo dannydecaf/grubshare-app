@@ -14,7 +14,7 @@ const FormInputGroup = ({children})=> {
     )
 }
 
-export default function Form({register}) {
+export default function Form({register, onSubmit}) {
     const navigation = useNavigation(),
     screen = register ? "Home" : "Register";
     const [email, setEmail] = useState(""),
@@ -38,7 +38,7 @@ export default function Form({register}) {
         </FormInputGroup>
 
         <FormButton primary={true} text={!register ? "Login" :"Register"}
-        onPress={()=>alert("I was pressed")}/>
+        onPress={()=>onSubmit(email, password)}/>
 
         <FormButton primary={false} onPress={()=>navigation.navigate(screen)}
         text={register ? "Login" : "Register"} />
